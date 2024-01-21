@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de datos</title>
+</head>
+<body>
+    <h1 id="titulo">Bienvenido</h1>
+    <p>
+        function cambiaTituloGetElementById() {
+            <br>
+            let titulo = document.getElementById("titulo"); <br>
+            titulo.innerHTML = "Ejecutaste getElementById"
+        }
+    </p>
+
+    <button onclick="cambiaTituloGetElementById()">getElementById</button>
+
+    <h2 class="titulo2" > Bienvenido QuerySelector</h2>
+    <p>
+        function cambiaTituloQuerySelector() { <br>
+            let titulo2 = document.querySelector(".titulo2"); <br>
+            titulo2.innerHTML = "ejecutaste querySelector!"
+        }
+    </p>
+
+    <button onclick="cambiaTituloQuerySelector()">querySelector</button>
+  
+    <ul class="listaFruta">
+        <li> Frutilla </li>
+        <li> Manzana </li>
+        <li> Ananá </li>
+        <li> Cereza </li>
+    </ul>
+    <button onclick="vaciarLista()"> Vaciar </button>
+
+
+
+    <script src="index.js"> </script>
+
+<script>
+
+function cambiaTituloGetElementById() {
+    let titulo = document.getElementById("titulo");
+    titulo.innerHTML = "Ejecutaste getElementById"
+}
+
+function cambiaTituloQuerySelector() {
+    let titulo2 = document.querySelector(".titulo2");
+    titulo2.innerHTML = "Ejecutaste querySelector!"
+}
+
+
+function vaciarLista(){
+    let elementosLista = document.querySelectorAll(".listaFruta");
+
+    elementosLista.forEach(
+        function(elemento, indice){
+            elemento.innerHTML = "vaciado con querySelectorAll";
+        }
+    )
+}
+
+
+</script>
+</body>
+</html>
